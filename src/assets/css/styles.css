@@ -1,0 +1,62 @@
+/* Additional styles for glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-header {
+    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque */
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+  }
+  
+  .glass-footer {
+    background: rgba(30, 58, 138, 0.8);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+  }
+ 
+/* Header background with flowing water effect */
+.glass-header {
+  background: linear-gradient(
+    120deg,
+    rgba(0, 192, 255, 0.6) 0%,
+    rgba(0, 172, 255, 0.4) 50%,
+    rgba(0, 152, 255, 0.6) 100%
+  ); /* Gradient simulating water flow */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Animated flowing water effect */
+.glass-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 192, 255, 0.4) 0%,
+    rgba(0, 172, 255, 0.2) 50%,
+    rgba(0, 152, 255, 0.4) 100%
+  );
+  animation: flow 3s linear infinite;
+}
+
+@keyframes flow {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}

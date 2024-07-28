@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/css/styles.css'; // Import custom CSS
+import '../assets/css/styles.css'; 
 
 const Feedback = () => {
   const [name, setName] = useState('');

@@ -1,24 +1,14 @@
-/* Additional styles for glassmorphism */
+/* Glassmorphism Styles */
+
+/* Glass Card */
 .glass-card {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(12px); /* Frosted glass effect */
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .glass-header {
-    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque */
-    backdrop-filter: blur(10px);
-    color: #ffffff;
-  }
-  
-  .glass-footer {
-    background: rgba(30, 58, 138, 0.8);
-    backdrop-filter: blur(8px);
-    color: #ffffff;
-  }
- 
-/* Header background with flowing water effect */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(12px); /* Frosted glass effect */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass Header without Animation */
 .glass-header {
   background: linear-gradient(
     120deg,
@@ -31,32 +21,32 @@
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
 }
 
-/* Optional: Animated flowing water effect */
-.glass-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(0, 192, 255, 0.4) 0%,
-    rgba(0, 172, 255, 0.2) 50%,
-    rgba(0, 152, 255, 0.4) 100%
-  );
-  animation: flow 3s linear infinite;
+/* Glass Footer */
+.glass-footer {
+  background: rgba(30, 58, 138, 0.8);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes flow {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 100%;
-  }
+/* Navbar Links */
+.nav-link {
+  color: white; /* Default text color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
+
+.nav-link:hover {
+  color: #60a5fa; /* Color on hover */
+}
+
+/* Active Link Styling */
+.nav-link-active {
+  font-weight: bold; /* Highlight active link */
+  color: #60a5fa; /* Different color for active link */
+}
+
+

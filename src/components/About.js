@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/styles.css'; // Import custom CSS
+import '../assets/css/styles.css'; 
 
 const About = () => (
   <div className="container mx-auto p-6 glass-card mt-8">

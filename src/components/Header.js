@@ -1,73 +1,26 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import '../assets/css/styles.css'; // Import custom CSS
+import { NavLink } from 'react-router-dom'; 
+import '../assets/css/styles.css'; 
 
-const Header = () => {
-  return (
-    <header className="glass-header p-4 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">SocialFlow</h1>
-        <nav>
-          <ul className="flex space-x-4">
-            <li>
-              <NavLink 
-                to="/" 
-                end 
-                className={({ isActive }) => 
-                  isActive ? 'nav-link nav-link-active' : 'nav-link'
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/about" 
-                className={({ isActive }) => 
-                  isActive ? 'nav-link nav-link-active' : 'nav-link'
-                }
-              >
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/features" 
-                className={({ isActive }) => 
-                  isActive ? 'nav-link nav-link-active' : 'nav-link'
-                }
-              >
-                Features
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/recruitment" 
-                className={({ isActive }) => 
-                  isActive ? 'nav-link nav-link-active' : 'nav-link'
-                }
-              >
-                Recruitment
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/feedback" 
-                className={({ isActive }) => 
-                  isActive ? 'nav-link nav-link-active' : 'nav-link'
-                }
-              >
-                Feedback
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  );
-};
+const Header = () => (
+  <header className="glass-header">
+    <div className="container header-nav">
+      <h1 className="text-2xl font-bold">SocialFlow</h1>
+      <nav>
+        <ul className="nav-list">
+          <li className="nav-item"><NavLink to="/" end className="nav-link">Home</NavLink></li>
+          <li className="nav-item"><NavLink to="/about" className="nav-link">About</NavLink></li>
+          <li className="nav-item"><NavLink to="/features" className="nav-link">Features</NavLink></li>
+          <li className="nav-item"><NavLink to="/recruitment" className="nav-link">Recruitment</NavLink></li>
+          <li className="nav-item"><NavLink to="/feedback" className="nav-link">Feedback</NavLink></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+);
 
 export default Header;
+
 
 
 

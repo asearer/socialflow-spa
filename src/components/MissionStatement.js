@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import MissionStatement from './MissionStatement'; 
-import '../assets/css/styles.css';
+import React from 'react';
+import '../assets/css/styles.css'; 
 
-const About = () => (
+const MissionStatement = () => (
   <div className="mission-statement-container glass-card">
     <h2 className="mission-statement-title">Our Mission</h2>
     <p className="mission-statement-text">
@@ -15,10 +14,4 @@ const About = () => (
   </div>
 );
 
-export default About;
-
-
-
-
-
-
+export default MissionStatement;

@@ -1,13 +1,14 @@
 import React from 'react';
-import '../assets/css/styles.css'; 
+import '../assets/css/styles.css';
 
 const Footer = () => (
-  <footer className="glass-footer p-4 text-center mt-8">
+  <footer className="glass-footer">
     <p>&copy; 2024 SocialFlow. All rights reserved.</p>
   </footer>
 );
 
 export default Footer;
+
 
 
 

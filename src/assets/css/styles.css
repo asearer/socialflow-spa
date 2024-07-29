@@ -1,3 +1,22 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 /* Glassmorphism Styles */
 
 /* Glass Card */
@@ -6,6 +25,8 @@
   backdrop-filter: blur(12px); /* Frosted glass effect */
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
 }
 
 /* Glass Header without Animation */
@@ -21,6 +42,9 @@
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Glass Footer */
@@ -31,22 +55,218 @@
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  margin-top: auto; /* Pushes footer to the bottom */
 }
 
-/* Navbar Links */
-.nav-link {
+/* Navbar */
+.glass-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.glass-header nav ul li {
+  margin: 0 10px;
+}
+
+.glass-header nav ul li a {
   color: white; /* Default text color */
+  text-decoration: none;
+  padding: 5px 10px;
   transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-.nav-link:hover {
+.glass-header nav ul li a:hover {
   color: #60a5fa; /* Color on hover */
 }
 
-/* Active Link Styling */
-.nav-link-active {
+.glass-header nav ul li a.active {
   font-weight: bold; /* Highlight active link */
   color: #60a5fa; /* Different color for active link */
 }
+
+/* Button */
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Home Component */
+.home-container {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 90vh; /* Set max height */
+  overflow: auto; /* Enable scrolling if content exceeds max height */
+  margin-top: 20px;
+}
+
+/* Recruitment Component */
+.recruitment-container {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 90vh; /* Set max height */
+  overflow: auto; /* Enable scrolling if content exceeds max height */
+}
+
+/* Learn More Component */
+.learn-more-container {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  max-height: 90vh; /* Set max height */
+  overflow: auto; /* Enable scrolling if content exceeds max height */
+}
+
+.learn-more-title {
+  font-size: 2.5rem;
+  color: #4f46e5; /* Indigo color */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.learn-more-description {
+  color: #4b5563; /* Gray color */
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+
+.learn-more-features {
+  margin-top: 20px;
+  padding-left: 20px;
+  color: #4b5563; /* Gray color */
+  list-style-type: disc;
+}
+
+.learn-more-features li {
+  margin-bottom: 10px;
+}
+
+.learn-more-button {
+  display: inline-block;
+  background-color: #3b82f6; /* Blue color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.learn-more-button:hover {
+  background-color: #2563eb; /* Darker blue */
+}
+
+/* Mission Statement Component */
+.mission-statement-container {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.mission-statement-title {
+  font-size: 2rem;
+  color: #4f46e5; /* Indigo color */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mission-statement-text {
+  color: #4b5563; /* Gray color */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Mission Component Button */
+.show-mission-button {
+  display: inline-block;
+  background-color: #3b82f6; /* Blue color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.show-mission-button:hover {
+  background-color: #2563eb; /* Darker blue */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .glass-header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .glass-header nav ul li {
+    margin: 5px 0;
+  }
+
+  .learn-more-container, .mission-statement-container {
+    padding: 15px;
+  }
+
+  .learn-more-title, .mission-statement-title {
+    font-size: 2rem;
+  }
+
+  .learn-more-description, .mission-statement-text {
+    font-size: 1rem;
+  }
+
+  .learn-more-button, .show-mission-button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  button, .learn-more-button, .show-mission-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+
+
 
 
